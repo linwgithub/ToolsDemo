@@ -70,4 +70,10 @@ public class MainActivity extends MyBaseAppCompatActivity {
             tvMainContent.setText(event.obj.toString());
         }
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();unregister
+        BusProvider.getInstance().unregister(this);
+    }
 }
