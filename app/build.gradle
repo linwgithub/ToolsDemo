@@ -33,4 +33,8 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     //添加OTTO
     compile 'com.squareup:otto:1.3.8'
+    // add LeakCanary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+//    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
 }

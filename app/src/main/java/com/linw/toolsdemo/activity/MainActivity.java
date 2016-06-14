@@ -73,7 +73,7 @@ public class MainActivity extends MyBaseAppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();unregister
+        super.onDestroy();
         BusProvider.getInstance().unregister(this);
     }
 }

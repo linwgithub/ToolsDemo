@@ -1,6 +1,10 @@
 package com.linw.toolsdemo;
 
 import android.app.Application;
+import android.content.Context;
+
+import com.squareup.leakcanary.LeakCanary;
+import com.squareup.leakcanary.RefWatcher;
 
 /**
  * 作者: linw
@@ -9,15 +13,29 @@ import android.app.Application;
  */
 public class MainApplication extends Application {
 
-    private static MainApplication app;
+//    获取MainApplication的单例
+//    private static MainApplication app;
 
-    public static MainApplication getInstance() {
-        return app;
+//    public static MainApplication getInstance() {
+//        return app;
+//    }
+
+//    @Override
+//    public void onCreate() {
+//        super.onCreate();
+//        app = this;
+//    }
+
+    private RefWatcher refWatcher;
+
+    public static RefWatcher getRefWatcher(Context context) {
+        MainApplication application = (MainApplication) context.getApplicationContext();
+        return application.refWatcher;
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        app = this;
+        refWatcher = LeakCanary.install(this);
     }
 }
