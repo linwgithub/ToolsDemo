@@ -24,7 +24,6 @@ public class MainActivity extends MyBaseAppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //注册订阅
         BusProvider.getInstance().register(this);
 
