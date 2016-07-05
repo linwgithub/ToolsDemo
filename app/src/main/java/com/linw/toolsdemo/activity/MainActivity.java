@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -13,7 +14,7 @@ import com.linw.toolsdemo.util.BusProvider;
 import com.linw.toolsdemo.util.MessageEvent;
 import com.squareup.otto.Subscribe;
 
-public class MainActivity extends MyBaseAppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     View viewMain;
     FloatingActionButton fabAdd;
@@ -44,11 +45,12 @@ public class MainActivity extends MyBaseAppCompatActivity {
             navigation_view.setNavigationItemSelectedListener(item -> {
                 switch (item.getItemId()) {
                     case R.id.item_home:
-
+                        Intent homeintent = new Intent(this, HomeActivity.class);
+                        startActivity(homeintent);
                         break;
                     case R.id.item_setting:
-                        Intent intent = new Intent(this, SettingActivity.class);
-                        startActivity(intent);
+//                        Intent intent = new Intent(this, SettingActivity.class);
+//                        startActivity(intent);
                         break;
                     case R.id.item_about:
 

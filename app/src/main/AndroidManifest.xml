@@ -18,7 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.SettingActivity"></activity>
+        <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.Tab1Activity" />
+        <activity android:name=".activity.Tab2Activity"></activity>
     </application>
 
 </manifest>

@@ -16,6 +16,7 @@ import com.linw.toolsdemo.R;
  */
 public class MyBaseAppCompatActivity extends AppCompatActivity {
 
+    protected String LOG_TAG = getClass().getSimpleName();
     protected Toolbar toolbar;
     protected TextView toolbar_title;
     private OnBackBtnClickListener onBackBtnClickListener;
@@ -23,6 +24,7 @@ public class MyBaseAppCompatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(LOG_TAG, "onCreate TaskId : " + this.getTaskId());
     }
 
     public interface OnBackBtnClickListener {
@@ -62,5 +64,23 @@ public class MyBaseAppCompatActivity extends AppCompatActivity {
         if (toolbar_title != null) {
             toolbar_title.setText(title);
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e(LOG_TAG, "onDestroy");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.e(LOG_TAG, "onStop");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e(LOG_TAG, "onPause");
     }
 }
