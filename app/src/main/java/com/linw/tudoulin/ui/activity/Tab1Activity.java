@@ -1,15 +1,15 @@
-package com.linw.toolsdemo.activity;
+package com.linw.tudoulin.ui.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.linw.toolsdemo.R;
+import com.linw.tudoulin.R;
 
-public class Tab2Activity extends AppCompatActivity {
+public class Tab1Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab2);
+        setContentView(R.layout.activity_tab1);
     }
 }

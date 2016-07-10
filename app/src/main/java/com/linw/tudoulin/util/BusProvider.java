@@ -1,4 +1,4 @@
-package com.linw.toolsdemo.util;
+package com.linw.tudoulin.util;
 
 import com.squareup.otto.Bus;
 

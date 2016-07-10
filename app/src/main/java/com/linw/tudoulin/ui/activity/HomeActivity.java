@@ -1,12 +1,11 @@
-package com.linw.toolsdemo.activity;
+package com.linw.tudoulin.ui.activity;
 
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TabHost;
 
-import com.linw.toolsdemo.R;
+import com.linw.tudoulin.R;
 
 public class HomeActivity extends TabActivity {
 

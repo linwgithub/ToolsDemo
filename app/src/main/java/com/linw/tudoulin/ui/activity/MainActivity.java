@@ -1,4 +1,4 @@
-package com.linw.toolsdemo.activity;
+package com.linw.tudoulin.ui.activity;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
@@ -9,9 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.linw.toolsdemo.R;
-import com.linw.toolsdemo.util.BusProvider;
-import com.linw.toolsdemo.util.MessageEvent;
+import com.linw.tudoulin.R;
+import com.linw.tudoulin.util.BusProvider;
+import com.linw.tudoulin.util.MessageEvent;
 import com.squareup.otto.Subscribe;
 
 public class MainActivity extends AppCompatActivity {

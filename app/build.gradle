@@ -7,7 +7,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.linw.toolsdemo"
+        applicationId "com.linw.tudoulin"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
@@ -36,5 +36,6 @@ dependencies {
     // add LeakCanary
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
-//    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    //    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    compile project(':onekeyshare')
 }

@@ -1,11 +1,11 @@
-package com.linw.toolsdemo.activity;
+package com.linw.tudoulin.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
 
-import com.linw.toolsdemo.R;
-import com.linw.toolsdemo.util.BusProvider;
-import com.linw.toolsdemo.util.MessageEvent;
+import com.linw.tudoulin.R;
+import com.linw.tudoulin.util.BusProvider;
+import com.linw.tudoulin.util.MessageEvent;
 
 public class SettingActivity extends MyBaseAppCompatActivity {
 

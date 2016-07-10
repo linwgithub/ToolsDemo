@@ -1,4 +1,4 @@
-package com.linw.toolsdemo;
+package com.linw.tudoulin;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
