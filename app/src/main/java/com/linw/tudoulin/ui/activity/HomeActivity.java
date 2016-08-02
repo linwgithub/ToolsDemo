@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.TabHost;
 
 import com.linw.tudoulin.R;
+import com.linw.tudoulin.ui.fragment.Tab1Activity;
+import com.linw.tudoulin.ui.fragment.Tab2Activity;
 
 public class HomeActivity extends TabActivity {
 

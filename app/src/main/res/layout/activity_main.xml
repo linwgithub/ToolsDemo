@@ -25,6 +25,17 @@
                 android:layout_height="wrap_content"
                 android:text="Hello World!" />
 
+            <RatingBar
+                android:id="@+id/rating_bar_top"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:progressDrawable="@drawable/rating_bar_bg"
+                android:isIndicator="false"
+                android:minHeight="30px"
+                android:minWidth="30px"
+                android:numStars="5"
+                android:rating="2"/>
+
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fab_main_add"
                 android:layout_width="wrap_content"

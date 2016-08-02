@@ -1,11 +1,13 @@
 package com.linw.tudoulin.ui.activity;
 
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -13,6 +15,8 @@ import com.linw.tudoulin.R;
 import com.linw.tudoulin.util.BusProvider;
 import com.linw.tudoulin.util.MessageEvent;
 import com.squareup.otto.Subscribe;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //注册订阅
         BusProvider.getInstance().register(this);
+
+        long time = System.currentTimeMillis();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(time);
+        int weekDay = calendar.get(Calendar.DAY_OF_WEEK);
+        Log.e("weekis", "week:" + weekDay);
+
 
         viewMain = findViewById(R.id.main_drawer_view);
         tvMainContent = (TextView) findViewById(R.id.tv_main_content);
@@ -49,11 +60,14 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(homeintent);
                         break;
                     case R.id.item_setting:
-//                        Intent intent = new Intent(this, SettingActivity.class);
-//                        startActivity(intent);
+                        Intent intent = new Intent(this, SettingActivity.class);
+                        startActivity(intent);
                         break;
                     case R.id.item_about:
-
+                        startActivity(new Intent(this, TabLayoutDemoActivity.class));
+                        break;
+                   case R.id.item_list:
+                        startActivity(new Intent(this, ShowHorizontalListView.class));
                         break;
                     default:
                         break;
