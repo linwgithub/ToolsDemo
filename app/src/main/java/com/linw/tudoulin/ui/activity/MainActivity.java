@@ -7,11 +7,13 @@ import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.linw.tudoulin.R;
+import com.linw.tudoulin.ui.widget.CustomToolbar;
 import com.linw.tudoulin.util.BusProvider;
 import com.linw.tudoulin.util.MessageEvent;
 import com.squareup.otto.Subscribe;
@@ -29,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        CustomToolbar customToolbar = new CustomToolbar();
+//        customToolbar.initActionbar(this);
         //注册订阅
         BusProvider.getInstance().register(this);
 
@@ -56,15 +60,14 @@ public class MainActivity extends AppCompatActivity {
             navigation_view.setNavigationItemSelectedListener(item -> {
                 switch (item.getItemId()) {
                     case R.id.item_home:
-                        Intent homeintent = new Intent(this, HomeActivity.class);
-                        startActivity(homeintent);
+                        Snackbar.make(viewMain, "首页", Snackbar.LENGTH_SHORT).show();
                         break;
                     case R.id.item_setting:
                         Intent intent = new Intent(this, SettingActivity.class);
                         startActivity(intent);
                         break;
                     case R.id.item_about:
-                        startActivity(new Intent(this, TabLayoutDemoActivity.class));
+//                        startActivity(new Intent(this, TabLayoutDemoActivity.class));
                         break;
                    case R.id.item_list:
                         startActivity(new Intent(this, ShowHorizontalListView.class));
@@ -77,6 +80,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void mainBtnClick(View view) {
+        switch (view.getId()) {
+            case R.id.main_btn_1:
+                Intent homeintent = new Intent(this, HomeActivity.class);
+                startActivity(homeintent);
+                break;
+
+        }
+    }
     //添加注释表示该方法订阅了MessageEvent，PS：该方法必须用public修饰
     @Subscribe
     public void showEvent(MessageEvent event) {
