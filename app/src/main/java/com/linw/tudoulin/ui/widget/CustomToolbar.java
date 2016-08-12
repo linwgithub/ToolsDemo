@@ -52,4 +52,17 @@ public class CustomToolbar {
         });
         return true;
     }
+
+    public void setTitle(String title) {
+        if (toolbar_title != null) {
+            toolbar_title.setText(title);
+        }
+    }
+
+    public String getMyTitle() {
+        if (toolbar_title != null) {
+            return toolbar_title.getText().toString();
+        }
+        return "";
+    }
 }
