@@ -1,4 +1,4 @@
-package com.linw.tudoulin.util.LWObserverUtil;
+package com.linw.tudoulin.util.lwobserverutil;
 
 /**
  * 作者: linw

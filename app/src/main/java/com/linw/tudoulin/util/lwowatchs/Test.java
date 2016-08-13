@@ -1,5 +1,8 @@
 package com.linw.tudoulin.util.lwowatchs;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * 作者: linw
  * 时间: 16/8/12
@@ -19,5 +22,10 @@ public class Test {
         watched.addWatcher(watcher_3);
 
         watched.notifyWatchers("event begin\n");
+
+        long time = System.currentTimeMillis();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-00");
+        String daa = sdf.format(new Date(time));
+        System.out.print("date:"+daa);
     }
 }

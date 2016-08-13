@@ -1,4 +1,4 @@
-package com.linw.tudoulin.util.LWObserverUtil;
+package com.linw.tudoulin.util.lwobserverutil;
 
 import java.util.Observable;
 import java.util.Observer;
