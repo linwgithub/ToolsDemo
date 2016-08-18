@@ -1,67 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_drawer_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".ui.activity.MainActivity">
-    <!--content-->
-    <LinearLayout
-        android:id="@+id/view_main_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/main_drawer_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white"
-        android:orientation="vertical">
-
-        <!--<include layout="@layout/wedgit_toolbar_layout" />-->
-
+        android:fitsSystemWindows="true"
+        tools:context=".ui.activity.MainActivity">
+        <!--content-->
         <LinearLayout
+            android:id="@+id/view_main_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@android:color/white"
             android:orientation="vertical">
-            <TextView
-                android:id="@+id/tv_main_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hello World!" />
 
-            <Button
-                android:id="@+id/main_btn_1"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="使用TabActivity创建Tab"
-                android:onClick="mainBtnClick"/>
-            <RatingBar
-                android:id="@+id/rating_bar_top"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:progressDrawable="@drawable/rating_bar_bg"
-                android:isIndicator="false"
-                android:minHeight="30px"
-                android:minWidth="30px"
-                android:numStars="5"
-                android:rating="2"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/fab_main_add"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:clickable="true"
-                android:src="@mipmap/ic_launcher"
-                app:borderWidth="3dp"
-                app:rippleColor="@color/colorPrimary" />
+                <Button
+                    android:id="@+id/btn_tablayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="mainBtnClick"
+                    android:text="TabLayoutDemoActivity" />
+
+                <Button
+                    android:id="@+id/btn_tabactivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="mainBtnClick"
+                    android:text="TabActivityDemoActivity" />
+
+                <Button
+                    android:id="@+id/btn_toot_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="mainBtnClick"
+                    android:text="TOOT test" />
+
+               <Button
+                    android:id="@+id/btn_toot_horizontallist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="mainBtnClick"
+                    android:text="HorizontalActivity" />
+
+                <Button
+                    android:id="@+id/btn_databinding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="mainBtnClick"
+                    android:text="DataBinding" />
+
+                <RatingBar
+                    android:id="@+id/rating_bar_top"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:minHeight="30px"
+                    android:minWidth="30px"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/rating_bar_bg"
+                    android:rating="2" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_main_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:clickable="true"
+                    android:src="@mipmap/ic_launcher"
+                    app:borderWidth="3dp"
+                    app:rippleColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_main_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello World!" />
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-    <!--left Menu-->
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/item_navigation_header"
-        app:menu="@menu/main_left_menu" />
-</android.support.v4.widget.DrawerLayout>
+        <!--left Menu-->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/item_navigation_header"
+            app:menu="@menu/main_left_menu" />
+    </android.support.v4.widget.DrawerLayout>
+</layout>

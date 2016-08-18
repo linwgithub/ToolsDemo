@@ -18,8 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.SettingActivity" />
-        <activity android:name=".ui.activity.HomeActivity" />
+        <activity android:name=".ui.activity.TOOTActivity" />
+        <activity android:name=".ui.activity.TabActivityDemoActivity" />
         <activity android:name=".ui.fragment.Tab1Activity" />
         <activity android:name=".ui.fragment.Tab2Activity" />
         <activity android:name=".ui.activity.TabLayoutDemoActivity" />

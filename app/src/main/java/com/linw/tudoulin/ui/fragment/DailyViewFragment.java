@@ -45,25 +45,25 @@ public class DailyViewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_daily_view, null, false);
 
-        viewPager = (ViewPager) view.findViewById(R.id.viewpager_time_axis);
-        viewPager.setAdapter(weekPageAdapter);
+//        viewPager = (ViewPager) view.findViewById(R.id.viewpager_time_axis);
+//        viewPager.setAdapter(weekPageAdapter);
         return view;
     }
 
-    PagerAdapter weekPageAdapter = new PagerAdapter() {
-        @Override
-        public int getCount() {
-            return 7;
-        }
-
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return view == object;
-        }
-
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-            return super.instantiateItem(container, position);
-        }
-    };
+//    PagerAdapter weekPageAdapter = new PagerAdapter() {
+//        @Override
+//        public int getCount() {
+//            return 7;
+//        }
+//
+//        @Override
+//        public boolean isViewFromObject(View view, Object object) {
+//            return view == object;
+//        }
+//
+//        @Override
+//        public Object instantiateItem(ViewGroup container, int position) {
+//            return super.instantiateItem(container, position);
+//        }
+//    };
 }

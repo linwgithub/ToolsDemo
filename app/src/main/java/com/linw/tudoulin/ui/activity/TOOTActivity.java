@@ -8,14 +8,14 @@ import com.linw.tudoulin.base.MyBaseAppCompatActivity;
 import com.linw.tudoulin.util.BusProvider;
 import com.linw.tudoulin.util.MessageEvent;
 
-public class SettingActivity extends MyBaseAppCompatActivity {
+public class TOOTActivity extends MyBaseAppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
+        setContentView(R.layout.activity_toot);
         initActionBar();
-        setTitle("设置");
+        setTitle("util test");
     }
 
     public void postEventNo(View view) {
