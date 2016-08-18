@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.linw.tudoulin.R;
+import com.linw.tudoulin.base.MyBaseAppCompatActivity;
 import com.linw.tudoulin.util.BusProvider;
 import com.linw.tudoulin.util.MessageEvent;
 

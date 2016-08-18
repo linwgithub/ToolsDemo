@@ -23,7 +23,8 @@
         <activity android:name=".ui.fragment.Tab1Activity" />
         <activity android:name=".ui.fragment.Tab2Activity" />
         <activity android:name=".ui.activity.TabLayoutDemoActivity" />
-        <activity android:name=".ui.activity.ShowHorizontalListView"></activity>
+        <activity android:name=".ui.activity.ShowHorizontalListView" />
+        <activity android:name=".ui.activity.BindingTextActivity"></activity>
     </application>
 
 </manifest>

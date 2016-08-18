@@ -52,4 +52,11 @@ public class RxUtils {
 
         observable.subscribe(subscriberSub);
     }
+
+
+    public void observerbFrom() {
+        int[] datas = {1, 2, 3, 4, 5, 6, 7};
+        String[] strs = {"a", "b", "c", "d"};
+        Observable observable = Observable.from(strs);
+    }
 }

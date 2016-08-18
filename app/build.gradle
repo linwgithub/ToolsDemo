@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 //3 配置gradle-retrolambda
 apply plugin: 'me.tatarka.retrolambda'
+// databinding 2
+//apply plugin: 'com.android.databinding'
 
 android {
     compileSdkVersion 23
