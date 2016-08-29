@@ -6,7 +6,6 @@
     <data>
 
     </data>
-
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/main_drawer_view"
         android:layout_width="match_parent"
@@ -31,35 +30,48 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="mainBtnClick"
-                    android:text="TabLayoutDemoActivity" />
+                    android:text="TabLayoutDemoActivity"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/btn_tabactivity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="mainBtnClick"
-                    android:text="TabActivityDemoActivity" />
+                    android:text="TabActivityDemoActivity"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/btn_toot_result"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="mainBtnClick"
-                    android:text="TOOT test" />
+                    android:text="TOOT test"
+                    android:textAllCaps="false" />
 
-               <Button
+                <Button
                     android:id="@+id/btn_toot_horizontallist"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="mainBtnClick"
-                    android:text="HorizontalActivity" />
+                    android:text="HorizontalActivity"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btn_adjust_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="mainBtnClick"
+                    android:text="Adjust Android N"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/btn_databinding"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="mainBtnClick"
-                    android:text="DataBinding" />
+                    android:text="DataBinding"
+                    android:textAllCaps="false" />
 
                 <RatingBar
                     android:id="@+id/rating_bar_top"

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.TableLayout;
 import android.widget.Toast;
 
 import com.linw.tudoulin.R;
@@ -83,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_databinding:
                 startActivity(new Intent(this, BindingTextActivity.class));
+                break;
+            case R.id.btn_adjust_n:
+                startActivity(new Intent(this, AdjustAndoridNActivity.class));
                 break;
             default:
                 break;
