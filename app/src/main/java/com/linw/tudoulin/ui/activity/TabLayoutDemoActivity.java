@@ -47,7 +47,7 @@ public class TabLayoutDemoActivity extends AppCompatActivity {
 
     public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
-        String[] fragmentTitle = {"Monthly View", "Daily View"};
+        String[] fragmentTitle = {"Daily View", "Monthly View"};
 
         Fragment fragments[] = {DailyViewFragment.getInstance(0), MonthlyViewFragment.getInstance(1)};
 

@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.e(TAG, "permission denind");
             }
         }
-        Log.e(TAG, "onRequestPermissionsResult:permission:" + permissions.toString() + "\ngrantResults" + grantResults);
+        Log.e(TAG, "onRequestPermissionsResult:permission:" + permissions[0] + "\ngrantResults" + grantResults[0]);
     }
 
     @Override
