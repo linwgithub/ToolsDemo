@@ -1,9 +1,15 @@
 package com.linw.tudoulin.ui.activity;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
+import android.nfc.Tag;
+import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +26,9 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    private static final String TAG = "MainActivity";
+
+    private static final int WRITE_EXTERNAL_STORAGE_REQUEST_CODE = 0x01;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +38,17 @@ public class MainActivity extends AppCompatActivity {
         BusProvider.getInstance().register(this);
 
         initView();
+    }
+
+    private void applyPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            //申请WRITE_EXTERNAL_STORAGE权限
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    WRITE_EXTERNAL_STORAGE_REQUEST_CODE);
+        } else {
+            Log.e(TAG, "permission granted");
+        }
     }
 
     private void initView() {
@@ -86,6 +106,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_adjust_n:
                 startActivity(new Intent(this, AdjustAndoridNActivity.class));
                 break;
+            case R.id.btn_applypermission:
+                applyPermission();
+                break;
             default:
                 break;
 
@@ -101,6 +124,21 @@ public class MainActivity extends AppCompatActivity {
         } else if (event.msg.equals("no")) {
             binding.tvMainContent.setText(event.obj.toString());
         }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        //请求权限回调
+        if (requestCode == WRITE_EXTERNAL_STORAGE_REQUEST_CODE) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                //
+                Log.e(TAG, "permission granted");
+            } else {
+                Log.e(TAG, "permission denind");
+            }
+        }
+        Log.e(TAG, "onRequestPermissionsResult:permission:" + permissions.toString() + "\ngrantResults" + grantResults);
     }
 
     @Override

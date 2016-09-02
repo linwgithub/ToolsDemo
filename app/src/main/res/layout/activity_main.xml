@@ -73,6 +73,14 @@
                     android:text="DataBinding"
                     android:textAllCaps="false" />
 
+                <Button
+                    android:id="@+id/btn_applypermission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="mainBtnClick"
+                    android:text="6.0权限请求"
+                    android:textAllCaps="false" />
+
                 <RatingBar
                     android:id="@+id/rating_bar_top"
                     android:layout_width="100dp"
@@ -94,7 +102,7 @@
                     app:borderWidth="3dp"
                     app:rippleColor="@color/colorPrimary" />
 
-                <TextView
+                <TextView android:textIsSelectable="true"
                     android:id="@+id/tv_main_content"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
